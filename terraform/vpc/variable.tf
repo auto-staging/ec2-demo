@@ -1,0 +1,3 @@
+variable "repository" {}
+
+variable "branch" {}

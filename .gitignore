@@ -1,0 +1,8 @@
+# Terraform
+.terraform
+
+# Go dep
+vendor
+
+# Go build
+bin
