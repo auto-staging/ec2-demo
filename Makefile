@@ -5,7 +5,7 @@ auto-staging-apply: terraform-vpc-apply terraform-alb-apply terraform-ec2-apply 
 auto-staging-destroy: terraform-build-destroy terraform-ec2-destroy terraform-alb-destroy terraform-vpc-destroy
 
 setup-environment:
-	curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh && mv ${GOPATH}/bin/dep /usr/bin/dep
+	curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh && mv /go/bin/dep /usr/bin/dep
 
 terraform-alb-init:
 	cd terraform/alb && \
