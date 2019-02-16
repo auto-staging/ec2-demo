@@ -1,5 +1,5 @@
 resource "aws_iam_role" "codepipeline_role" {
-  name = "codepipeline-${var.repository-${var.branch}-role"
+  name = "codepipeline-${var.repository}-${var.branch}-role"
 
   assume_role_policy = <<POLICY
 {
