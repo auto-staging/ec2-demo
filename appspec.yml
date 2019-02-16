@@ -1,0 +1,19 @@
+version: 0.0
+os: linux
+files:
+  - source: bin/
+    destination: /opt/auto-staging-ec2-demo
+  - source: static/css/
+    destination: /opt/auto-staging-ec2-demo/static/css
+  - source: templates/
+    destination: /opt/auto-staging-ec2-demo/templates
+  - source: systemd/auto-staging-ec2-demo.service
+    destination: /etc/systemd/system
+hooks:
+  BeforeInstall:
+    - location: scripts/stop_demo_app.sh
+  ApplicationStart:
+    - location: scripts/start_demo_app.sh
+  ValidateService:
+    - location: scripts/check_demo_app.sh
+      timeout: 60
