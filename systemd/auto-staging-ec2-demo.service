@@ -6,7 +6,7 @@ After=network.target
 Type=simple
 User=ubuntu
 WorkingDirectory=/opt/auto-staging-ec2-demo
-ExecStart=/opt/rauto-staging-ec2-demo/auto-staging-ec2-demo
+ExecStart=/opt/auto-staging-ec2-demo/auto-staging-ec2-demo
 Restart=on-failure
 
 [Install]
