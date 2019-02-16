@@ -12,12 +12,13 @@ phases:
       - export CODEBUILD_SRC_DIR=${HOME}/go/src/github.com/auto-staging/ec2-demo
       - export GOPATH=${HOME}/go
 
+      - cd $CODEBUILD_SRC_DIR
       - make build
 artifacts:
   files:
-    - bin/*
-    - static/css/*
-    - templates/*
-    - scripts/*
-    - appspec.yml
-    - systemd/auto-staging-ec2-demo.service
+    - ${HOME}/go/src/github.com/auto-staging/ec2-demo/bin/*
+    - ${HOME}/go/src/github.com/auto-staging/ec2-demo/static/css/*
+    - ${HOME}/go/src/github.com/auto-staging/ec2-demo/templates/*
+    - ${HOME}/go/src/github.com/auto-staging/ec2-demo/scripts/*
+    - ${HOME}/go/src/github.com/auto-staging/ec2-demo/appspec.yml
+    - ${HOME}/go/src/github.com/auto-staging/ec2-demo/systemd/auto-staging-ec2-demo.service
