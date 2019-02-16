@@ -6,6 +6,12 @@ phases:
       - make setup-environment
   build:
     commands:
+      # Copy code to folder, which works with go dep
+      - mkdir -p ${HOME}/go/src/github.com/auto-staging/ec2-demo
+      - mv $CODEBUILD_SRC_DIR/* ${HOME}/go/src/github.com/auto-staging/ec2-demo
+      - export CODEBUILD_SRC_DIR=${HOME}/go/src/github.com/auto-staging/ec2-demo
+      - export GOPATH=${HOME}/go
+
       - make build
 artifacts:
   files:
