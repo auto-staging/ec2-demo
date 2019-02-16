@@ -72,7 +72,7 @@ resource "aws_iam_role_policy" "codepipeline_policy" {
       ],
       "Resource": "*",
       "Effect": "Allow"
-    },
+    }
   ],
   "Version": "2012-10-17"
 }
